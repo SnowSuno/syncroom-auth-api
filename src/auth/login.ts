@@ -34,5 +34,5 @@ export const login = async (username: string, password: string) => {
 
   const serviceRedirection = await nextRedirection(providerRedirection);
 
-  return serviceRedirection.searchParams.get("webKey");
+  return new URLSearchParams(serviceRedirection.hash).get("webKey");
 };
