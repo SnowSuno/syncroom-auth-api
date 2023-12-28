@@ -14,9 +14,9 @@ app.post("/login", zValidator("json", z.object({
 })), async c => {
   const { username, password } = c.req.valid("json");
 
-  const token = await login(username, password);
+  const key = await login(username, password);
 
-  return c.json({ token });
+  return c.json({ key });
 });
 
 export { app };
