@@ -1,4 +1,8 @@
+Syncroom Authentication API
+
+> Authentication API for [Syncroom link](https://github.com/SnowSuno/syncroom-korea)
+
 ```
-npm install
-npm run start
+pnpm install
+pnpm start
 ```
