@@ -9,7 +9,7 @@ import { cors } from "hono/cors";
 const app = new Hono().basePath("/api");
 
 app.use("/api/*", cors({
-  origin: ["https://syncroom.link", "http://localhost"],
+  origin: ["https://syncroom.link", "http://localhost:5173"],
 }));
 
 app.post("/login", zValidator("json", z.object({
