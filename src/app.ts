@@ -8,7 +8,7 @@ import { cors } from "hono/cors";
 
 const app = new Hono().basePath("/api");
 
-app.use("/api/*", cors({
+app.use("*", cors({
   origin: ["https://syncroom.link", "http://localhost:5173"],
 }));
 
