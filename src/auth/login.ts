@@ -18,7 +18,7 @@ export const login = async (username: string, password: string) => {
     }
   ).then(res => res.json());
 
-  if (credentials.statusCode in [401, 403]) throw new HTTPException(
+  if ([401, 403].includes(credentials.statusCode)) throw new HTTPException(
     credentials.statusCode, credentials.message);
 
   const { headers } = await fetch(
